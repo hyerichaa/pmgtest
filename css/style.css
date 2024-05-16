@@ -261,7 +261,7 @@ video{
     .kvi{
         top: 55.5%;
         left: 29%;
-        width: 35vw;
+        width: 34.3vw;
         height: 20vw;
     }
     .btn_wrap{
@@ -285,13 +285,29 @@ video{
         width: 12px;
         height: 12px;
     }
-
+    .pop_wrap{
+        width: 76vw;
+        height: 112vw;
+    }
     .btn_close{
         width: 15px;
         height: 15px;
+        top: -30px;
     }
 }
 
+@media screen and (max-width: 480px) {
+    #spotlight{
+        mask-size: 30vw, 100%;
+        mask-position: calc(var(--x) - var(--size) / 5)
+        calc(var(--y) - var(--size) / 2 * 0.9),
+    left top;
+    }
+    .pop_wrap{
+        width: 84vw;
+        height: 170vw;
+    }
+}
 @media screen and (max-width: 390px) {
     :root {
         --size: max(30vw, 210px);
@@ -305,5 +321,9 @@ video{
     .kvi{
         width: 34vw;
         height: 22vw;
+    }
+    .pop_wrap{
+        width: 84vw;
+        height: 140vw;
     }
 }

@@ -18,10 +18,10 @@ $('.viewAll').on('click', function(){
 
 $('#show').on('click', function(){
     $('.popup').show();
-    $('#popVideo').get(0).currentTime = 0;
+    $('.popVideo').get(0).currentTime = 0;
     
 })
 $('.btn_close').on('click', function(){
     $('.popup').hide();
-    $('#popVideo').get(0).stop();
+    $('.popVideo').get(0).stop();
 })
