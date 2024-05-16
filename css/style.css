@@ -62,7 +62,7 @@ main img{
     width: 100vw;
     background-color: rgba(0, 0, 0, 1);
     
-    mask: url(images/focus2.svg),
+    mask: url(../images/focus2.svg),
     linear-gradient(#fff 0 0);
     mask-size: var(--size), 100%;
     mask-position: calc(var(--x) - var(--size) / 2)
