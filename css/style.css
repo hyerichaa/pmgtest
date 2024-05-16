@@ -141,7 +141,7 @@ video{
     color: #fff;
 }
 .viewAll{
-    width: 150px;
+    width: 160px;
     font-size: 24px;
     color: #fff;
     display: flex;
@@ -271,7 +271,7 @@ video{
         column-gap: 20px;
     }
     .btn{
-        width: 160px;
+        width: 150px;
         height: 44px;
         font-size: 16px;
         font-weight: 700;
