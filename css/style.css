@@ -34,8 +34,11 @@ a{text-decoration: none;}
 :root {
     --x: 50vw;
     --y: 50vh;
-    --size: max(150.43px, 210px);
+    --size: max(150px, 210px);
 }
+
+.pc_only{display: block;}
+.mo_only{display: none;}
 
 body {
     position: relative;
@@ -54,6 +57,21 @@ main img{
     width: 100%;
     height: 100%;
 }
+
+.title{
+    position: absolute;
+    top: 95px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;
+}
+.title p{
+    color: #fff;
+    font-size: 24px;
+    padding-top: 60px;
+
+}
 #spotlight {
     position: fixed;
     top: 0;
@@ -62,7 +80,7 @@ main img{
     width: 100vw;
     background-color: rgba(0, 0, 0, 1);
     
-    mask: url(../images/focus2.svg),
+    mask: url(/images/focus2.svg),
     linear-gradient(#fff 0 0);
     mask-size: var(--size), 100%;
     mask-position: calc(var(--x) - var(--size) / 2)
@@ -74,13 +92,17 @@ main img{
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
 }
+#spotlight.all{
+    opacity: 0;
+    transition: 1.5s;
+}
 
 .kvi{
     position: absolute;
-    top: 28.5%;
-    left: 10.3%;
-    width: 180px;
-    height: 110px;
+    top: 36.5%;
+    left: 25.6%;
+    width: 203px;
+    height: 113px;
 }
 video{
     width: 100%;
@@ -91,10 +113,14 @@ video{
     width: 100%;
     position: absolute;
     bottom: 70px;
+    z-index: 20;
+}
+.btn_inner{
     display: flex;
     justify-content: center;
     align-items: center ;
     column-gap: 30px;
+    margin-top: 40px;
 }
 .btn{
     width: 269px;
@@ -111,8 +137,55 @@ video{
     background-color: transparent;
 }
 .btn.full{
-    background-color: #E5451C;
+    background-color: #F6714F;
     color: #fff;
+}
+.viewAll{
+    width: 150px;
+    font-size: 24px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.icon_right{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/Icon_right.png) no-repeat center / contain;
+
+}
+
+.popup{
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 30;
+}
+.black_bg{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.pop_wrap{
+    position: absolute;
+    width: 1116px;
+    height: 628px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.btn_close{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -50px;
+    right: 0;
+    background: url(../images/btn_X.png) no-repeat center / cover;
 }
 
 @media screen and (max-width: 1620px) {
@@ -126,8 +199,8 @@ video{
     left top;
     }
     .kvi{
-        width: 9.5vw;
-        height: 7vw;
+        width: 10.8vw;
+        height: 6vw;
     }
 }
 @media screen and (max-width: 1280px) {
@@ -137,10 +210,46 @@ video{
         calc(var(--y) - var(--size) / 2 * 1.4),
     left top;
     }
+    .pop_wrap{
+        position: absolute;
+        width: 80vw;
+        height: 50vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 @media screen and (max-width: 768px) {
     :root {
         --size: max(20vw, 310px);
+    }
+    .pc_only{display: none;}
+    .mo_only{ display: block;}
+
+    .title{
+        width: 100%;
+        top: 40px;
+    }
+    .title img{
+        width: 158.72px;
+        height: 32.96px;
+    }
+    .title p{
+        color: #fff;
+        font-size: 16px;
+        padding-top: 44px;
+        line-height: 1.5;
+    }
+    .title p:after{
+        content: '';
+        display: block;
+        width: 2px;
+        height: 35px;
+        border-left: 2px dotted #fff;
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
     }
     #spotlight{
         mask-size: 20vw, 100%;
@@ -149,8 +258,36 @@ video{
     left top;
     }
     .kvi{
-        width: 30vw;
+        top: 55.5%;
+        left: 29%;
+        width: 35vw;
         height: 20vw;
+    }
+    .btn_wrap{
+        bottom: 30px;
+    }
+    .btn_inner{
+        column-gap: 20px;
+    }
+    .btn{
+        width: 150px;
+        height: 44px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 42px;
+        letter-spacing: -1.5px;
+    }
+    .viewAll{
+        font-size: 16px;
+    }
+    .icon_right{
+        width: 14px;
+        height: 14px;
+    }
+
+    .btn_close{
+        width: 15px;
+        height: 15px;
     }
 }
 
@@ -165,7 +302,7 @@ video{
     left top;
     }
     .kvi{
-        width: 36vw;
+        width: 34vw;
         height: 22vw;
     }
 }

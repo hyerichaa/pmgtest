@@ -6,11 +6,18 @@
     <title>Hyper Pro Teaser</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 <body>
     <main>
-        <img src="images/main.png" alt="메인 이미지">
+        <img src="/images/main.png" alt="메인 이미지" class="pc_only">
+        <img src="/images/main_m.png" alt="메인 이미지" class="mo_only">
     </main>
+    <div class="title">
+        <img src="images/hyper_pro_logo.png" alt="하이퍼 프로 로고">
+        <p class="pc_only">방안에 숨겨진 메시지를 찾아볼까요?</p>
+        <p class="mo_only">화면을 끌어서<br>방안에 숨겨진 메시지를 찾아볼까요?</p>
+    </div>
     <div class="kvi">
         <video autoplay loop muted>
             <source src="images/HyperPro_UNIBODY_Teaser Animation_No text_maste.mp4" type="video/mp4">
@@ -18,20 +25,25 @@
     </div>
     <div id="spotlight" draggable="true"></div>
     <div class="btn_wrap">
-        <a href="#" class="btn line">티저영상 보기</a>
-        <a href="#" class="btn full">메인 페이지로 가기</a>
+        <a href="#" class="viewAll">방 전체보기 <i class="icon_right"></i></a>
+        <div class="btn_inner">
+            <a href="#" class="btn line" id="show">티저영상 보기</a>
+            <a href="#" class="btn full">메인 페이지로 가기</a>
+        </div>
+        
+    </div>
+
+    <div class="popup">
+        <div class="black_bg"></div>
+        <div class="pop_wrap">
+            <a href="#" class="btn_close"></a>
+            <video autoplay loop muted id="popVideo">
+                <source src="images/HyperPro_UNIBODY_Teaser Animation_No text_maste.mp4" type="video/mp4">
+            </video>
+        </div>
+        
     </div>
 </body>
 
-
-<script>
-var root = document.querySelector(":root");
-function spotlight(e) {
-  root.style.setProperty("--x", e.pageX + "px");
-  root.style.setProperty("--y", e.pageY + "px");
-}
-window.addEventListener("pointermove", spotlight);
-window.addEventListener("pointerdown", spotlight);
-
-</script>
+<script src="js/teaser.js"></script>
 </html>
