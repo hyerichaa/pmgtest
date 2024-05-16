@@ -1,0 +1,171 @@
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+a{text-decoration: none;}
+/* reset */
+
+
+
+:root {
+    --x: 50vw;
+    --y: 50vh;
+    --size: max(150.43px, 210px);
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family:'Mont','NotoSans',sans-serif;
+    }
+
+main{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+main img{
+    width: 100%;
+    height: 100%;
+}
+#spotlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 1);
+    
+    mask: url(/images/focus2.svg),
+    linear-gradient(#fff 0 0);
+    mask-size: var(--size), 100%;
+    mask-position: calc(var(--x) - var(--size) / 2)
+        calc(var(--y) - var(--size) / 2 * 2),
+    left top;
+    mask-repeat: no-repeat;
+    mask-mode: alpha;
+
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}
+
+.kvi{
+    position: absolute;
+    top: 28.5%;
+    left: 10.3%;
+    width: 180px;
+    height: 110px;
+}
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.btn_wrap{
+    width: 100%;
+    position: absolute;
+    bottom: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    column-gap: 30px;
+}
+.btn{
+    width: 269px;
+    height: 68px;
+    border-radius: 200px;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 66px;
+}
+.btn.line{
+    border: 2px solid #E5451C;
+    color: #E5451C;
+    background-color: transparent;
+}
+.btn.full{
+    background-color: #E5451C;
+    color: #fff;
+}
+
+@media screen and (max-width: 1620px) {
+    :root {
+        --size: max(10vw, 210px);
+    }
+    #spotlight{
+        mask-size: 10vw, 100%;
+        mask-position: calc(var(--x) - var(--size) / 3)
+        calc(var(--y) - var(--size) / 2 * 1.6),
+    left top;
+    }
+    .kvi{
+        width: 9.5vw;
+        height: 7vw;
+    }
+}
+@media screen and (max-width: 1280px) {
+    #spotlight{
+        mask-size: 10vw, 100%;
+        mask-position: calc(var(--x) - var(--size) / 3.5)
+        calc(var(--y) - var(--size) / 2 * 1.4),
+    left top;
+    }
+}
+@media screen and (max-width: 768px) {
+    :root {
+        --size: max(20vw, 310px);
+    }
+    #spotlight{
+        mask-size: 20vw, 100%;
+        mask-position: calc(var(--x) - var(--size) / 3.8)
+        calc(var(--y) - var(--size) / 2 * 1),
+    left top;
+    }
+    .kvi{
+        width: 30vw;
+        height: 20vw;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    :root {
+        --size: max(30vw, 210px);
+    }
+    #spotlight{
+        mask-size: 30vw, 100%;
+        mask-position: calc(var(--x) - var(--size) / 4)
+        calc(var(--y) - var(--size) / 2 * 1.3),
+    left top;
+    }
+    .kvi{
+        width: 36vw;
+        height: 22vw;
+    }
+}
