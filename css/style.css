@@ -151,9 +151,10 @@ video{
 }
 .icon_right{
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     background: url(../images/Icon_right.png) no-repeat center / contain;
+    margin-left: 4px;
 
 }
 
@@ -281,8 +282,8 @@ video{
         font-size: 16px;
     }
     .icon_right{
-        width: 14px;
-        height: 14px;
+        width: 12px;
+        height: 12px;
     }
 
     .btn_close{
