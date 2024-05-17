@@ -32,5 +32,5 @@ $('#show').on('click', function(){
 })
 $('.btn_close').on('click', function(){
     $('.popup').hide();
-    $('.popVideo').get(0).stop();
+    $('.popVideo').get(0).stop;
 })
