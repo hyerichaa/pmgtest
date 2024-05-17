@@ -10,8 +10,10 @@
 </head>
 <body>
     <main>
-        <img src="images/main.png" alt="메인 이미지" class="pc_only">
-        <img src="images/main_m.png" alt="메인 이미지" class="mo_only">
+        <div class="main_wrap">
+            <img src="images/main.png" alt="메인 이미지" class="pc_only">
+            <img src="images/main_m2.png" alt="메인 이미지" class="mo_only">
+        </div>
     </main>
     <div class="title">
         <img src="images/hyper_pro_logo.png" alt="하이퍼 프로 로고">
@@ -23,28 +25,31 @@
             <source src="images/HyperPro_UNIBODY_Teaser Animation_No text_maste.mp4" type="video/mp4">
         </video>
     </div>
+
     <div id="spotlight" draggable="true"></div>
+
     <div class="btn_wrap">
-        <a href="#" class="viewAll">방 전체보기 <i class="icon_right"></i></a>
+        <div class="view_wrap">
+            <a href="#" class="viewAll">방 전체보기 <i class="icon_right"></i></a>
+            <a href="#" class="viewBack">돌아가기 <i class="icon_right"></i></a>
+        </div>
         <div class="btn_inner">
             <a href="#" class="btn line" id="show">티저영상 보기</a>
             <a href="#" class="btn full">메인 페이지로 가기</a>
         </div>
-        
     </div>
 
     <div class="popup">
         <div class="black_bg"></div>
         <div class="pop_wrap">
             <a href="#" class="btn_close"></a>
-            <video autoplay loop muted playsinline class="pc_only popVideo">
+            <video autoplay loop playsinline class="pc_only popVideo">
                 <source src="images/HyperPro_UNIBODY_Teaser Animation_No text_maste.mp4" type="video/mp4">
             </video>
             <video autoplay loop muted playsinline  class="mo_only popVideo">
                 <source src="images/HyperPro_UNIBODY_Teaser Animation (Vertical)_No text-출시날짜 추가.mp4" type="video/mp4">
             </video>
         </div>
-        
     </div>
 </body>
 
