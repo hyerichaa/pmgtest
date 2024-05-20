@@ -37,6 +37,5 @@ $('.btn_close').on('click', function(){
     $('.popup').hide();
     /* $('.popVideo').get(0).stop().muted(); */
     $('.popVideo').prop('muted', true);
-
     $('.popVideo').pause();
 })
