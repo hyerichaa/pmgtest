@@ -23,14 +23,19 @@ $('.viewBack').on('click', function(){
     
 })
 
+$('.kvi_video').prop('muted', true);
+
 /* popup */
 
 $('#show').on('click', function(){
     $('.popup').show();
     $('.popVideo').get(0).currentTime = 0;
+    $(".popVideo").prop('muted', false);
     
 })
 $('.btn_close').on('click', function(){
     $('.popup').hide();
-    $('.popVideo').get(0).stop().muted();
+    //$('.popVideo').get(0).stop().muted();
+
+    $(".popVideo").prop('muted', true);
 })
