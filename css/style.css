@@ -94,7 +94,7 @@ main img{
     linear-gradient(#fff 0 0);
     mask-size: var(--size), 100%;
     mask-position: calc(var(--x) - var(--size) / 2)
-        calc(var(--y) - var(--size) / 2 * 2),
+        calc(var(--y) - var(--size) / 2 * 3.5),
     left top;
     mask-repeat: no-repeat;
     mask-mode: alpha;
@@ -233,7 +233,7 @@ video{
     #spotlight{
         mask-size: 10vw, 100%;
         mask-position: calc(var(--x) - var(--size) / 3)
-        calc(var(--y) - var(--size) / 2 * 1.6),
+        calc(var(--y) - var(--size) / 2 * 2.8),
     left top;
     }
     .kvi{
@@ -255,7 +255,7 @@ video{
     #spotlight{
         mask-size: 10vw, 100%;
         mask-position: calc(var(--x) - var(--size) / 3.5)
-        calc(var(--y) - var(--size) / 2 * 1.4),
+        calc(var(--y) - var(--size) / 2 * 2.4),
     left top;
     }
     .pop_wrap{
@@ -318,7 +318,7 @@ video{
     #spotlight{
         mask-size: 20vw, 100%;
         mask-position: calc(var(--x) - var(--size) / 3.8)
-        calc(var(--y) - var(--size) / 2 * 1),
+        calc(var(--y) - var(--size) / 2 * 2),
     left top;
     }
     .kvi{
@@ -363,7 +363,7 @@ video{
     #spotlight{
         mask-size: 30vw, 100%;
         mask-position: calc(var(--x) - var(--size) / 5)
-        calc(var(--y) - var(--size) / 2 * 0.9),
+        calc(var(--y) - var(--size) / 2 * 2),
     left top;
     }
     .pop_wrap{
@@ -384,7 +384,7 @@ video{
     #spotlight{
         mask-size: 30vw, 100%;
         mask-position: calc(var(--x) - var(--size) / 4)
-        calc(var(--y) - var(--size) / 2 * 1.3),
+        calc(var(--y) - var(--size) / 2 * 2.6),
     left top;
     }
     .kvi{
